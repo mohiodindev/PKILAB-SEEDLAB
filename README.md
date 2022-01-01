@@ -93,8 +93,7 @@ ATTACHED SCEENSHOTS
 https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_5_1.png
 https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task%23_3.png
 https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_1.png
-https://github.com/ghulammohiodin/PKILAB-
-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_2.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_2.png
 https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/tsk_3.png
  
  
@@ -142,6 +141,7 @@ observations
        https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_6.png
        https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_7.png
        https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_8.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/result%20of%20task%204.png
          
  Make a directory in  
  
@@ -185,6 +185,34 @@ properly, we can browse the web site, and all the traffic between the browser an
     // Restart Apache
     sudo service apache2 restart
     
+    
+    
+# Task 5: Launching a Man-In-The-Middle Attack
+ATTACHED SCREENSHOTS 
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_5_1.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/pki%20man%20in%20middle%20(2).png
+ # Step 1: Setting up the malicious website.  
+ Go to
+     
+     
+     /etc/apache2/sites-available
+   directory and open the file
+      
+      
+    default-ssl.conf
+ 
+# Task 6: Launching a Man-In-The-Middle Attack with a Compromised CA
+   
+ ATACHED SCREENSHOTS 
+ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6.png
+ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6_1.png
+ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6_2.png
+ . You can use the same setting created in Task 5, but this time, you need to demonstrate that
+the MITM attack is successful, i.e., the browser will not raise any suspicion when the victim tries to visit a
+website but land in the MITM attacker’s fake website
+    
+
+ 
 
 
     
