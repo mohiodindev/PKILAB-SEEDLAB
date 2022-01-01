@@ -6,8 +6,16 @@ https://seedsecuritylabs.org/Labs_16.04/PDF/Crypto_PKI.pdf
 Copy the configuration file into current directory:
 
      cp /usr/lib/ssl/openssl.cnf ./openssl.cnf 
-create new sub-directories and files according to what it specifies in its [ CA_default ]section:
+   what does this comand means
+     
+         req	Creates a signing request.
+        -new	Creates new requests.
+         -x509	Inspects signed certificate by loading x509 modules.
+         -keyout	Used to give a path to a filename, where it writes newly created private keys. 
+          -out	Specifies the output file where the result will be stored.
+            -config	Configuration file to be specified. 
 
+create new sub-directories and files 
      
        mkdir PKI
        cp "/usr/lib/ssl/openssl.cnf" "/home/seed/PKI/"
@@ -16,8 +24,14 @@ create new sub-directories and files according to what it specifies in its [ CA_
        mkdir certs crl newcerts
        echo 1000 > serial
        gedit index.txt
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png
+  https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png
 
+Start to generate the self-signed certificate for the CA:
+
+return to the parent directory
+
+     cd ..
+    openssl req -new -x509 -keyout ca.key -out ca.crt -config openssl.cnf 
 
 
 
