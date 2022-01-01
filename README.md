@@ -26,7 +26,7 @@ create new sub-directories and files
        gedit index.txt
   ATTACHED SCREENSHOT
 ![task1](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png)
-  https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/75734d4870c3b01215b64dd5051e1629a1584456/task_1_1pki.png
+  
 
 Start to generate the self-signed certificate for the CA:
 
@@ -57,6 +57,7 @@ return to the parent directory
     Organizational Unit Name (eg, section) []:uosahiwalbscs
      Common Name (e.g. server FQDN or YOUR name) []:mohiodin
       Email Address []:mohiodin@test.com
+![task1](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/75734d4870c3b01215b64dd5051e1629a1584456/task_1_1pki.png)
  
  
  # Task 2: Creating a Certificate for SEEDPKILab2021.com
