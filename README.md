@@ -64,6 +64,7 @@ return to the parent directory
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2.png
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_2.png
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_3.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63c105dc066ec4f633618199f67f16ee59754a7c/task_2_4.png
 # Step 1: Generate public/private key pair.
 
        
