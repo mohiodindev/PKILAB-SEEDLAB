@@ -89,6 +89,60 @@ You can choose that policy by changing the following line:
 
 # Task 3: Deploying Certificate in an HTTPS Web Server
 
+ATTACHED SCEENSHOTS
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_5_1.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task%23_3.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_1.png
+https://github.com/ghulammohiodin/PKILAB-
+SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_2.png
+https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/tsk_3.png
+ 
+ 
+# Step 1: Configuring DNS.
+
+   edit 
+   
+   
+     /etc/hosts/
+  and add this 
+        
+        
+        127.0.0.1 SEEDPKILab2021.com
+
+# Configuring the web server.
+ Combine the secret key and certificate into one file
+ 
+        cp server.key server.pem
+        cat server.crt >> server.pem
+# Launch the web server using server.pem
+     openssl s_server -cert server.pem -www
+Goto browser and write 
+
+
+        https://SEEDPKILab2021.com
+# Getting the browser to accept our CA certificate
+    Edit -> Preference -> Privacy & Security -> View Certificates.
+    
+#  Testing our HTTPS website
+. Modify a single byte of server.pem, and restart the server, and reload the URL. What do you
+observe? Make sure you restore the original server.pem afterward. Note: the server may not be
+able to restart if certain places of server.pem is corrupted; in that case, choose another place to
+modify.
+2. Since SEEDPKILab2021.com points to the localhost, if we use https://localhost:4433
+instead, we will be connecting to the same web server. Please do so, describe and explain your
+observations
+
+
+#  Task 4: Deploying Certificate in an Apache-Based HTTPS Website
+  ATTACHED SCREENSHOTS
+       
+        task_4.png
+
+
+
+
+
+ 
 
 
 
