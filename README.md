@@ -3,7 +3,7 @@
 https://seedsecuritylabs.org/Labs_16.04/PDF/Crypto_PKI.pdf
 
 # Task 1: Becoming a Certificate Authority (CA)
-1. mkdir PKI
+1.     mkdir PKI
 cp "/usr/lib/ssl/openssl.cnf" "/home/seed/PKI/"
 mkdir demoWK
 cd demoWK
