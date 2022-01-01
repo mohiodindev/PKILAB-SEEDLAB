@@ -158,7 +158,36 @@ observations
         cd /var/www/
         sudo mkdir seedpki
         sudo cp "/var/www/html/index.html/" "/var/www/seedpki/"
-        
+To add an HTTPS website, we need to add a VirtualHost entry to the default-ssl.conf file
+in the same folder.
+
+
+
+     <VirtualHost *:443>
+     ServerName two.example.com
+    DocumentRoot /var/www/Example_Two
+    DirectoryIndex index.html
+      SSLEngine On
+     SSLCertificateFile /etc/apache2/ssl/example_cert.pem ➀
+    SSLCertificateKeyFile /etc/apache2/ssl/example_key.pem ➁
+    </VirtualHost>        
+  
+After the default-ssl.conf file is modified, we need to run a series of commands to enable SSL.
+Apache will ask us to type the password used for encrypting the private key. Once everything is set up
+properly, we can browse the web site, and all the traffic between the browser and the server will be encrypted
+
+     Test the Apache configuration file for errors
+     sudo apachectl configtest
+    // Enable the SSL module
+      sudo a2enmod ssl
+    // Enable the site we have just edited
+     sudo a2ensite default-ssl
+    // Restart Apache
+    sudo service apache2 restart
+    
+
+
+    
  
         
 
