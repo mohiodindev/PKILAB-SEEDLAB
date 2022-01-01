@@ -64,7 +64,16 @@ return to the parent directory
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2.png
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_2.png
    https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_3.png
+# Step 1: Generate public/private key pair.
 
+       
+       openssl genrsa -aes128 -out server.key 1024
+ The server.key is an encoded text file (also encrypted), so you will not be able to see the actualcontent, such as the modulus, private exponents, etc. To see those, you can run the following command:
+ 
+      openssl rsa -in server.key -tex
+      
+# Step 2: Generate a Certificate Signing Request (CSR)
+       openssl req -new -key server.key -out server.csr -config openssl.cnf
 
 
 
