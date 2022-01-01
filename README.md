@@ -24,8 +24,8 @@ create new sub-directories and files
        mkdir certs crl newcerts
        touch 1000 > serial
        gedit index.txt
-  ATTACHED SCREENSHOTS
-  https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png
+  ATTACHED SCREENSHOT
+![task1](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png)
   https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/75734d4870c3b01215b64dd5051e1629a1584456/task_1_1pki.png
 
 Start to generate the self-signed certificate for the CA:
