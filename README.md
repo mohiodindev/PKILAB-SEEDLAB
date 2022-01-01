@@ -61,11 +61,6 @@ return to the parent directory
  
  
  # Task 2: Creating a Certificate for SEEDPKILab2021.com
-   ATTACHED SCREENSHOTS 
-   https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2.png
-   https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_2.png
-   https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/721eca5780ea0a0826d49873b2af8aee569b9a53/task_2_3.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63c105dc066ec4f633618199f67f16ee59754a7c/task_2_4.png
 # Step 1: Generate public/private key pair.
 
        
@@ -76,9 +71,12 @@ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63c105dc066ec4f633618199f6
       
 # Step 2: Generate a Certificate Signing Request (CSR)
        openssl req -new -key server.key -out server.csr -config openssl.cnf
+  ![task2](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_2_2.png)
+  ![task2](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_2_3.png)
 # Step 3: Generating Certificates
      openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key \
     -config openssl.cnf
+ ![task2](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_2.png)
 If OpenSSL refuses to generate certificates, it is very likely that the names in your requests do not match
 with those of CA. The matching rules are specified in the configuration file (look at the [policy match]
 section). You can change the names of your requests to comply with the policy, or you can change the policy.
@@ -88,16 +86,7 @@ You can choose that policy by changing the following line:
 
        "policy = policy_match" change to "policy = policy_anything".
 
-# Task 3: Deploying Certificate in an HTTPS Web Server
-
-ATTACHED SCEENSHOTS
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_5_1.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task%23_3.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_1.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_3_2.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/tsk_3.png
- 
- 
+# Task 3: Deploying Certificate in an HTTPS Web Server 
 # Step 1: Configuring DNS.
 
    edit 
@@ -114,6 +103,7 @@ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b2038
  
         cp server.key server.pem
         cat server.crt >> server.pem
+ ![task3](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_3_1.png)
 # Launch the web server using server.pem
      openssl s_server -cert server.pem -www
 Goto browser and write 
@@ -122,6 +112,7 @@ Goto browser and write
         https://SEEDPKILab2021.com
 # Getting the browser to accept our CA certificate
     Edit -> Preference -> Privacy & Security -> View Certificates.
+![task3](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_3_2.png)
     
 #  Testing our HTTPS website
 . Modify a single byte of server.pem, and restart the server, and reload the URL. What do you
@@ -131,18 +122,9 @@ modify.
 2. Since SEEDPKILab2021.com points to the localhost, if we use https://localhost:4433
 instead, we will be connecting to the same web server. Please do so, describe and explain your
 observations
-
+![task3](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/tsk_3.png)
 
 #  Task 4: Deploying Certificate in an Apache-Based HTTPS Website
-  ATTACHED SCREENSHOTS
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_4.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_3.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_4.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_5.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_6.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_7.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_8.png
-       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/result%20of%20task%204.png
          
  Make a directory in  
  
@@ -159,8 +141,11 @@ observations
         cd /var/www/
         sudo mkdir seedpki
         sudo cp "/var/www/html/index.html/" "/var/www/seedpki/"
+        
+ ![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4.png)
 To add an HTTPS website, we need to add a VirtualHost entry to the default-ssl.conf file
 in the same folder.
+![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4_4.png)
 
 
 
@@ -172,7 +157,8 @@ in the same folder.
      SSLCertificateFile /etc/apache2/ssl/example_cert.pem ➀
     SSLCertificateKeyFile /etc/apache2/ssl/example_key.pem ➁
     </VirtualHost>        
-  
+  ![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4_5.png)
+  ![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4_6.png)
 After the default-ssl.conf file is modified, we need to run a series of commands to enable SSL.
 Apache will ask us to type the password used for encrypting the private key. Once everything is set up
 properly, we can browse the web site, and all the traffic between the browser and the server will be encrypted
@@ -186,32 +172,43 @@ properly, we can browse the web site, and all the traffic between the browser an
     // Restart Apache
     sudo service apache2 restart
     
-    
+   ![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4_3.png)
+   ![task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_4_8.png)
+   ![result of task4](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/result%20of%20task%204.png)
     
 # Task 5: Launching a Man-In-The-Middle Attack
-ATTACHED SCREENSHOTS 
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_5_1.png
-https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/pki%20man%20in%20middle%20(2).png
  # Step 1: Setting up the malicious website.  
- Go to
-     
-     
-     /etc/apache2/sites-available
-   directory and open the file
+     openssl genrsa -aes128 -out instagram.key 1024
+     openssl req -new -key instagram.key -out example.csr -config openssl.cnf
+    openssl ca -in example.csr -out instafram.crt -cert ca.crt -keyfile ca.key \
+    -config openssl.cnf
+    cp instagram.key instagram.pem
+    cat instagram.crt >> instagram.pem
+ 
+Copy the certificate and private key to the website root folder:
+
+     sudo mkdir /var/www/instagram
+     sudo cp instagram.crt instagram.pem /var/www/instagram
+   Config and start the server On the server VM, open /etc/apache2/sites-available/default-ssl.conf and add the following entry:
+
+     <VirtualHost *:443>
+        ServerName instagram.com
+        DocumentRoot /var/www/instagram
+        DirectoryIndex index.html
+
+        SSLEngine On
+        SSLCertificateFile /var/www/instagram/instagram.crt
+        SSLCertificateKeyFile /var/www/instagram/instagram.pem
+        </VirtualHost>
       
-      
+![task5](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_5_1.png)      
     default-ssl.conf
  
 # Task 6: Launching a Man-In-The-Middle Attack with a Compromised CA
    
- ATACHED SCREENSHOTS 
- https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6.png
- https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6_1.png
- https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63b5331451e5ea20257314fd5f46ea83eb21f6bf/task_6_2.png
- . You can use the same setting created in Task 5, but this time, you need to demonstrate that
-the MITM attack is successful, i.e., the browser will not raise any suspicion when the victim tries to visit a
-website but land in the MITM attacker’s fake website
-    
+     openssl req -new -x509 -keyout ca.key -out ca.crt -config openssl.cnf
+![task6](https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/b73d00f72116412c916beca44a6ada9819aef54b/task_6.png)
+ Then, ca.crt can be used to sign any server's certificate, including the forged ones. The process of such attacks can be described as what we did before, except that we don't even need to deploy the ca.crt on the victim machine because it has already installed the same ca.crt  
 
  
 
