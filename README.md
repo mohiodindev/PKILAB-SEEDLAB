@@ -5,7 +5,7 @@ https://seedsecuritylabs.org/Labs_16.04/PDF/Crypto_PKI.pdf
 # Task 1: Becoming a Certificate Authority (CA)
 Copy the configuration file into current directory:
 
-cp /usr/lib/ssl/openssl.cnf ./openssl.cnf 
+     cp /usr/lib/ssl/openssl.cnf ./openssl.cnf 
 create new sub-directories and files according to what it specifies in its [ CA_default ]section:
 
       dir = ./demoCA # Where everything is kept
