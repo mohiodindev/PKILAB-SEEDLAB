@@ -10,7 +10,7 @@ https://seedsecuritylabs.org/Labs_16.04/PDF/Crypto_PKI.pdf
        mkdir certs crl newcerts
        echo 1000 > serial
        gedit index.txt
-       (https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png)
+(https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/91c23f19cf6cfe5b205d0789d6d320b3585d1c14/task_1%20pki.png)
 
 
  
