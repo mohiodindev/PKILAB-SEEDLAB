@@ -75,6 +75,19 @@ https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/63c105dc066ec4f633618199f6
       
 # Step 2: Generate a Certificate Signing Request (CSR)
        openssl req -new -key server.key -out server.csr -config openssl.cnf
+# Step 3: Generating Certificates
+     openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key \
+    -config openssl.cnf
+If OpenSSL refuses to generate certificates, it is very likely that the names in your requests do not match
+with those of CA. The matching rules are specified in the configuration file (look at the [policy match]
+section). You can change the names of your requests to comply with the policy, or you can change the policy.
+The configuration file also includes another policy (called policy anything), which is less restrictive.
+You can choose that policy by changing the following line:
+
+
+       "policy = policy_match" change to "policy = policy_anything".
+
+
 
 
 
