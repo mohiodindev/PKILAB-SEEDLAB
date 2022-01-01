@@ -135,8 +135,32 @@ observations
 
 #  Task 4: Deploying Certificate in an Apache-Based HTTPS Website
   ATTACHED SCREENSHOTS
-       
-        task_4.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/a15b9b96776cbc9732e17b203890f5bd7f7c96cc/task_4.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_3.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_4.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_5.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_6.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_7.png
+       https://github.com/ghulammohiodin/PKILAB-SEEDLAB/blob/cbfdcd429203781907fa40c2ca7310cd3365190b/task_4_8.png
+         
+ Make a directory in  
+ 
+           
+           
+         /var/www/
+ and copy 
+ 
+         
+         
+        index.html                    
+ in it 
+ 
+        cd /var/www/
+        sudo mkdir seedpki
+        sudo cp "/var/www/html/index.html/" "/var/www/seedpki/"
+        
+ 
+        
 
 
 
