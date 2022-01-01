@@ -10,10 +10,10 @@ Copy the configuration file into current directory:
      
          req	Creates a signing request.
         -new	Creates new requests.
-         -x509	Inspects signed certificate by loading x509 modules.
-         -keyout	Used to give a path to a filename, where it writes newly created private keys. 
-          -out	Specifies the output file where the result will be stored.
-            -config	Configuration file to be specified. 
+       -x509	Inspects signed certificate by loading x509 modules.
+       -keyout	Used to give a path to a filename, where it writes newly created private keys. 
+       -out	Specifies the output file where the result will be stored
+       -config	Configuration file to be specified. 
 
 create new sub-directories and files 
      
